@@ -21,7 +21,7 @@ const rl = readline.createInterface({
                     console.log('No Telp Tidak Valid')
                     
                 }else {
-                    console.log('Data Berhasil Ditambahkan');
+                    console.log('My name is',nama + ', Your phone number ',noTelp + ', Your email is ',email);
                     rl.close()
                 }
                 return false;
