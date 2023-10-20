@@ -56,7 +56,7 @@ getNama()
 
 // Menyimpan data kontak
 const simpanContact = (nama, email, noTelp) =>{
-    const contact = {nama, noTelp, email};
+    const contact = {nama, email, noTelp};
     const file = fs.readFileSync(`data/contacts.json`, `utf-8`);
     const contacts = JSON.parse(file);
             
