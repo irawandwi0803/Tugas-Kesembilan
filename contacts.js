@@ -18,9 +18,9 @@ if (!fs.existsSync(dataPath)) {
     fs.writeFileSync(dataPath, `[]`, `utf-8`)
 };
 
-rl.question(`Masukkan Nama Kamu:` ,(nama) => {
-    rl.question(`Masukkan Nomor HP Kamu:` ,(noTelp) => {
-        rl.question('Masukkan Email Kamu:' ,(email) => {
+rl.question(`Masukkan Nama Kamu: ` ,(nama) => {
+    rl.question(`Masukkan Nomor HP Kamu: ` ,(noTelp) => {
+        rl.question('Masukkan Email Kamu: ' ,(email) => {
             //menyimpan data yang telah dimasukkan
             const contact = {nama, noTelp, email};
             const file = fs.readFileSync(`data/contacts.json`, `utf-8`);
