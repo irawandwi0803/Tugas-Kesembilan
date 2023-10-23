@@ -65,11 +65,6 @@ const inputEmail = (nama, noTelp) => {
     });
 };
 
-// const main = async() => {
-//     const nama = await inputNama();
-//     const noTelp = await inputNoTelp();
-//     const email = await inputEmail();
-
 const saveContact = (nama, noTelp, email) => {
     const contact = {nama, noTelp, email};
     const file = fs.readFileSync(`data/contacts.json`, `utf-8`);
