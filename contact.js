@@ -35,7 +35,7 @@ const saveContact = (nama, noTelp, email) => {
     }
 
     contacts.push(contact);
-    fs.writeFileSync(`data/contacts.json`, JSON.stringify(contacts));
+    fs.writeFileSync(dataPath, JSON.stringify(contacts));
 
     console.log(`Data berhasil disimpan`)
 };
