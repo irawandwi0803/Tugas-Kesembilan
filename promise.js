@@ -3,7 +3,6 @@ const validator = require('validator');
 const fs = require(`fs`);
 const { resolve } = require('path');
 const { rejects } = require('assert');
-const nodemon = require('nodemon');
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -37,8 +36,8 @@ const inputNoTelp = (nama) => {
             resolve(noTelp);
             // cek no telp
             if (validator.isMobilePhone(noTelp, `id-ID`)) {
-            console.log('Nomor telepon valid: ' + noTelp);
-            inputEmail(nama, noTelp)
+                console.log('Nomor telepon valid: ' + noTelp);
+                inputEmail(nama, noTelp)
             }else {
                 console.log('Nomor telepon tidak valid. Silakan coba lagi.');
                 inputNoTelp(nama);
