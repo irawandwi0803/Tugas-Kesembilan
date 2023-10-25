@@ -18,6 +18,13 @@ const saveContact = (nama, noTelp, email) => {
     const contact = {nama, noTelp, email};
     const file = fs.readFileSync(dataPath, `utf-8`);
     const contacts = JSON.parse(file);
+
+    // cek duplikat nama
+    const duplikat = contacts.find((contact) => contact.nama === nama);
+    if (duplikat) {
+        console.log(`Nama sudah terdaftar, silahkan masukan nama lain!!!`)
+        return false;
+    }
     
     // cek nomor handphone
     if(noTelp) {
